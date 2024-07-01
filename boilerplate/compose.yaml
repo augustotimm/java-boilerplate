@@ -1,10 +1,10 @@
 services:
    db:
-    image: postgres:14
+    image: postgres:12
     restart: always
     environment:
       POSTGRES_USER: 'root'
       POSTGRES_PASSWORD: 'root'
-      POSTGRES_DB: hrtools
+      POSTGRES_DB: boilerplate
     ports:
       - '5432:5432'
