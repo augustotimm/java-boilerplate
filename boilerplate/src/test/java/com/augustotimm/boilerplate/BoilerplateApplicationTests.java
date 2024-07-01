@@ -1,4 +1,4 @@
-package com.augustotimm.boilerplate.boilerplate;
+package com.augustotimm.boilerplate;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
