@@ -10,7 +10,7 @@ import jakarta.persistence.Id;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Users")
+@Table(name = "users")
 public class User {
 
     @Id
@@ -30,4 +30,21 @@ public class User {
     @Column(name = "last_name", length = 50, nullable = false)
     @JsonProperty(value = "last_name")
     private String lastName;
+
+    public String getId() {return this.id;}
+    
+    public String getUserName() {return this.userName;}
+
+    
+    User(String userName, String firstName, String lastName) {
+        this.userName = userName;
+        this.firstName = firstName;
+        this.lastName = lastName;
+
+    }
+
+    User(String id, String userName, String firstName, String lastName) {
+        this(userName, firstName, lastName);
+        this.id = id;
+    }
 }
